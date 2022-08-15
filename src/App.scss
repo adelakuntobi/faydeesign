@@ -11,3 +11,10 @@ section{
   @apply py-20;
 }
 
+.bg-primary-text{
+  @apply text-primary bg-secondary;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 1rem;
+  font-weight: 700;
+}

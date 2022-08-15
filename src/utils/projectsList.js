@@ -83,9 +83,9 @@ export const ProjectsList = {
 
 export const Skills = [
   "Accessibility", "AR/VR", "Figma", "HR Technology", "Logistics", "Travel",
-  "illustration", "entertainment","design talk","Edtech","Fintech","Health",
-  "real estate","Web3","content creation","E-Commerce","hospitality","Frontend",
-  "Insurtech","Adobe Photoshop"
+  "illustration", "entertainment", "design talk", "Edtech", "Fintech", "Health",
+  "real estate", "Web3", "content creation", "E-Commerce", "hospitality", "Frontend",
+  "Insurtech", "Adobe Photoshop"
 ]
 
 export const SideProjects = [

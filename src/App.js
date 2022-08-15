@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import Logo from "./assets/images/logo.svg";
 import Loader from './components/Loader';
 import Meet from './routes/Meet';
+import Chekkit from './routes/Works/Chekkit';
 
 export default function App() {
   const [loader, setLoader] = useState(false)
@@ -27,6 +28,7 @@ export default function App() {
         <Routes>
           <Route exact path={PageURL.HOMEPAGE} element={<Homepage />} />
           <Route exact path={PageURL.MEET_ME} element={<Meet />} />
+          <Route exact path={PageURL.CHEKKIT_APP} element={<Chekkit />} />
           {/* <Route exact path={PageURL.STEPHAR} element={<Stephar />} />
         <Route exact path={PageURL.DRESS_MANAGEMENT} element={<DressMeasurement />} />
         <Route exact path={PageURL.BERVHOME} element={<BervHome />} />
