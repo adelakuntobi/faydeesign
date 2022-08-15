@@ -1,3 +1,13 @@
 *{
   font-family: 'Karla', sans-serif;
 }
+
+body{
+  color: #242424;
+  background: #FCFCFC;
+}
+
+section{
+  @apply py-20;
+}
+

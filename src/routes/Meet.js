@@ -5,7 +5,7 @@ export default function Meet() {
   return (
     <div className="container flex">
       <div className="w-full lg:w-8/12 pt-8">
-        <span className="bg-[#FCF9FF] text-primary p-4 inline-block rounded-2xl">Meet me</span>
+        <TextLight><span>Meet me</span></TextLight>
         <H1WithGradient className="">Interface<span>,</span> experience<span>,</span> Product<span>.</span></H1WithGradient>
         <DivWithPTag>
           <p>
@@ -59,5 +59,25 @@ const DivWithPTag = styled.div`
     &:last-of-type{
       margin-bottom: 0; 
     }
+  }
+`;
+
+export const TextLight = styled.div`
+  h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: capitalize;
+    color: #9B51E0;
+    margin: 10px 0;
+  }
+  span{
+    background-color: #FCF9FF;
+    color: #9B51E0;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 1rem;
+    font-weight: 700;
   }
 `;
