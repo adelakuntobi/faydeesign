@@ -4,7 +4,7 @@ export default function Footer() {
     <footer className="bg-[#290848] text-white py-10">
       <section className="container justify-between">
         <div className="text-3xl">
-          <h2 className="font-bold mb-3">Have an idea?</h2>
+          <h3 className="font-bold mb-3">Have an idea?</h3>
           <p>Reach out to me</p>
         </div>
         <div>

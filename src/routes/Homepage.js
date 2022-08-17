@@ -9,7 +9,7 @@ export default function Homepage() {
     <main className="container">
       <header className="text-center py-20">
         <h1 className="font-bold text-[64px] leading-none">Hey, nice to meet you! <span>I'm Faidat</span></h1>
-        <h2 className="font-bold text-5xl py-3"><span>Product</span> designer based in Lagos, Nigeria.</h2>
+        <h3 className="font-bold text-5xl py-3"><span>Product</span> designer based in Lagos, Nigeria.</h3>
         <p className=" max-w-4xl mx-auto"> I aim to solve user problems by delivering tailored and impactful solutions that enhance their whole experience on the web and beyond.
           Currently working in <a href="https://chekkitapp.com" className="font-bold " target="_blank" rel="noopener noreferrer"
           >Chekkit Technologies.</a></p>
