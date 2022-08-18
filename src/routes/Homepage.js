@@ -37,7 +37,7 @@ export default function Homepage() {
                         )}
                       </ul>
                       <p>{project.description}</p>
-                      <a href={project.route} className="text-primary text-right block pt-8">{project.linkText} <FiArrowUpRight /></a>
+                      <a href={project.route} className="text-primary text-right flex items-center justify-end gap-2 pt-8">{project.linkText} <FiArrowUpRight /></a>
                     </div>
                   </Project>
                 )
@@ -59,7 +59,7 @@ export default function Homepage() {
                         )}
                       </ul>
                       <p>{project.description}</p>
-                      <a href={project.route} className="text-primary text-right block pt-8">{project.linkText}</a>
+                      <a href={project.route} className="text-primary text-right flex items-center justify-end gap-2 pt-8">{project.linkText} <FiArrowUpRight /></a>
                     </div>
                   </Project>
                 )

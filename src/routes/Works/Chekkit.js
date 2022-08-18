@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Overview from "../../assets/images/chekkit-overview.svg";
-import DesignProcess from "../../assets/images/chekkit-design.svg";
+import Overview from "../../assets/images/chekkit/overview.svg";
+import DesignProcess from "../../assets/images/chekkit/design.svg";
 
 export default function Chekkit() {
   return (
