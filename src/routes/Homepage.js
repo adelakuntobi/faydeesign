@@ -3,6 +3,8 @@ import { TextLight } from "./Meet";
 import styled from "styled-components";
 import { ProjectsList, SideProjects, Skills } from "../utils/projectsList";
 
+import {FiArrowUpRight} from "react-icons/fi";
+
 export default function Homepage() {
 
   return (
@@ -35,7 +37,7 @@ export default function Homepage() {
                         )}
                       </ul>
                       <p>{project.description}</p>
-                      <a href={project.route} className="text-primary text-right block pt-8">{project.linkText}</a>
+                      <a href={project.route} className="text-primary text-right block pt-8">{project.linkText} <FiArrowUpRight /></a>
                     </div>
                   </Project>
                 )
