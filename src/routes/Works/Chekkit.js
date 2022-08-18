@@ -1,19 +1,71 @@
+
+// Styled Components
 import styled from "styled-components";
+
+// Images
 import Overview from "../../assets/images/chekkit/overview.svg";
 import DesignProcess from "../../assets/images/chekkit/design.svg";
+import DataGathering from "../../assets/images/chekkit/chart.svg";
+import UserPoints from "../../assets/images/chekkit/user-pain-point.svg";
+import Reviews from "../../assets/images/chekkit/review.svg";
+import Users from "../../assets/images/chekkit/testimony.svg";
+import Solution from "../../assets/images/chekkit/solution.svg";
+import Architecture from "../../assets/images/chekkit/architecture.svg";
+import UserFlow from "../../assets/images/chekkit/user-flow.svg";
+import Sketches from "../../assets/images/chekkit/sketches.svg";
+
 
 export default function Chekkit() {
+  const pageInfo = [
+    {
+      title: "Who are the Users",
+      desc: "Based on the interviews, my research, and my general understanding of the target user base. I've crafted a few brief user stories to better identify and define who our users are, what they require, and why they need the product.",
+      img: Users
+    },
+    {
+      title: "Providing a solution",
+      desc: "After the problem discovery and validation using these research methods, I Identified and defined difficulties, pain points, and solutions that may be redesigned to improve user experiences in attaining their end goal, prioritizing the earlier defined problems using the processes listed below.",
+      img: Solution
+    },
+    {
+      title: "Using insights to design",
+      desc: "After defining the problem, validating the problem and potential solutions through user research, and investigating similar competitors to uncover similar patterns to aid in the design of the correct flow, The next stage is to explore creative solutions, create wireframes, and high-fidelity designs based on user feedback.",
+    },
+    {
+      title: "information architecture",
+      desc: "The navigation, structure, and components of the website and extension were visualised using information architecture. It also assisted in determining, via multiple iterations, which portions, pages, or structures are required and which are not. When building a new information architecture for ChekkitApp, one of the most important aspects was basing it on key user data gathered through user research.",
+      img: Architecture
+    },
+    {
+      title: "User flow",
+      desc: "To avoid users from abandoning the application at onboarding phase, I would be focusing on building simpler onboarding flows and making the application's navigation as simple as possible.",
+      img: UserFlow
+    },
+    {
+      title: "Sketches",
+      desc: "I collated and completed simple drawings, layout, features, and concepts based on the user research I had done when I finished designing the user flow.",
+      img: Sketches
+    },
+    {
+      title: "Wireframes",
+      desc: "Based on preliminary user research and demands, I generated semi-low fidelity wireframes to help me focus on key functions, elements, and actions and suggest new product design improvements and layouts before starting the visual design.",
+    },
+    {
+      title: "Style Guide",
+      desc: "I created a style guide that contained type guides, colours, components, and icons guide. ",
+    },
+  ]
   return (
-    <div className='container'>
-      <section>
-        <p className='uppercase text-primary font-bold'>A redesign of ChekkitApp</p>
-        <h3 className=' text-5xl font-bold leading-tight'>A counterfeit detection and reporting application to protect people from fraudulent products.</h3>
+    <ComponentWithBigP className='container'>
+      <HeadingSection>
+        <p className='text-primary'>A redesign of ChekkitApp</p>
+        <h3 className=''>A counterfeit detection and reporting application to protect people from fraudulent products.</h3>
         <ul className='items-center gap-6 my-6'>
           <li className='bg-primary-text'>UX Design</li>
           <li className='bg-primary-text'>UI Design</li>
           <li className='bg-primary-text'>Prototype &amp; Testing </li>
         </ul>
-      </section>
+      </HeadingSection>
 
       <section className="!pt-0 flex-col lg:flex-row justify-between items-center gap-x-20 gap-y-10">
         <img src={Overview} alt="Overview" className="w-full lg:w-6/12" />
@@ -56,20 +108,41 @@ export default function Chekkit() {
 
       <section>
         <h2>Design Process</h2>
-        <img src={DesignProcess} className="w-full" alt="" />
+        <img src={DesignProcess} alt="" />
       </section>
 
       <section>
-        <h2 className="mb-6">Identifying The Problem</h2>
-        <p>A user-friendly application should be easy to pick up with no effort; nevertheless, ChekkitApp's absence of various additional functionalities is a serious issue that has a negative impact on the product. Users may depart the site in favour of better opportunities on other platforms if it lacks essential features like reporting, point conversion to cash, and store locator. Through my interviews, I learned about users’ habits using ChekkitApp and feature requests for some other features they use in other applications.</p>
-        <h3 className="font-bold text-2xl my-4">Data Gathering</h3>
-        <p>To gain insight into what could be improved, changed or added, a simple survey research conducted. Here are the most important pieces of information gathered.</p>
+        <div>
+          <h2 className="mb-6">Identifying The Problem</h2>
+          <p>A user-friendly application should be easy to pick up with no effort; nevertheless, ChekkitApp's absence of various additional functionalities is a serious issue that has a negative impact on the product. Users may depart the site in favour of better opportunities on other platforms if it lacks essential features like reporting, point conversion to cash, and store locator. Through my interviews, I learned about users’ habits using ChekkitApp and feature requests for some other features they use in other applications.</p>
+        </div>
+        <div>
+          <h3 className="font-bold text-2xl my-4">Data Gathering</h3>
+          <p>To gain insight into what could be improved, changed or added, a simple survey research conducted. Here are the most important pieces of information gathered.</p>
+          <img src={DataGathering} className="w-full mt-4" alt="" />
+        </div>
+        <div>
+          <h3 className="font-bold text-2xl mt-6">User Pain Points</h3>
+          <img src={UserPoints} className="w-full" alt="" />
+        </div>
+        <div>
+          <h3 className="font-bold text-2xl my-6">Some customer reviews on Google playstore</h3>
+          <img src={Reviews} className="w-full" alt="" />
+        </div>
       </section>
 
-      <section>
-        <h2>Who are the Users</h2>
-      </section>
-    </div>
+      {
+        pageInfo.map((item, index) => {
+          return (
+            <SectionAndImg>
+              <h2>{item.title}</h2>
+              <p>{item.desc}</p>
+              <img src={item.img} alt="" />
+            </SectionAndImg>
+          )
+        })
+      }
+    </ComponentWithBigP>
   )
 }
 
@@ -89,8 +162,38 @@ const Options = styled.div`
     font-size: 22px;
     line-height: 26px;
   }
-div:first-of-type{
-  padding-right: 2.5rem;
-  border-right: 2px solid #EDDAFF
-}
+  div:first-of-type{
+    padding-right: 2.5rem;
+    border-right: 2px solid #EDDAFF
+  }
 `;
+
+export const ComponentWithBigP = styled.div`
+  p{
+    font-size: 20px;
+    line-height: 1.5;
+  }
+`;
+
+export const HeadingSection = styled.section`
+  p{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  h3{
+    line-height: 1.25;
+    font-weight: 700;
+    font-size: 2.25rem/* 48px */;
+  }
+`;
+const SectionAndImg = styled.section`
+  img{
+    width: 100%;
+  }
+  p{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+`;
+

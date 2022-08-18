@@ -10,6 +10,9 @@ import Logo from "./assets/images/logo.svg";
 import Loader from './components/Loader';
 import Meet from './routes/Meet';
 import Chekkit from './routes/Works/Chekkit';
+import FindConnect from './routes/Works/FindConnect';
+import Warenext from './routes/Works/Warenext';
+import CrystalPalace from './routes/Works/CrystalPalace';
 
 export default function App() {
   const [loader, setLoader] = useState(false)
@@ -29,11 +32,9 @@ export default function App() {
           <Route exact path={PageURL.HOMEPAGE} element={<Homepage />} />
           <Route exact path={PageURL.MEET_ME} element={<Meet />} />
           <Route exact path={PageURL.CHEKKIT_APP} element={<Chekkit />} />
-          {/* <Route exact path={PageURL.STEPHAR} element={<Stephar />} />
-        <Route exact path={PageURL.DRESS_MANAGEMENT} element={<DressMeasurement />} />
-        <Route exact path={PageURL.BERVHOME} element={<BervHome />} />
-        <Route exact path={PageURL.URBN} element={<Urbn />} />
-        <Route exact path={PageURL.DRESS_BRANDING} element={<Dress />} /> */}
+          <Route exact path={PageURL.FIND_CONNECT} element={<FindConnect />} />
+          <Route exact path={PageURL.WARENEXT} element={<Warenext />} />
+          <Route exact path={PageURL.CRYSTAL_PALACE} element={<CrystalPalace />} />
         </Routes>
         <Footer />
       </div>

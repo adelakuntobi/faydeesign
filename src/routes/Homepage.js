@@ -19,7 +19,7 @@ export default function Homepage() {
       <section>
         <TextLight>
           <span>Portfolio</span>
-          <h3>Selected Project.</h3>
+          <h3>Selected Projects.</h3>
         </TextLight>
         <div className="flex gap-x-20 my-12">
           <div className="w-1/2 flex gap-y-10 flex-col">
