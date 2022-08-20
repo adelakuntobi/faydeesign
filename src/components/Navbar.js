@@ -4,7 +4,7 @@ import * as Pages from "../utils/pageUrl"
 export default function Navbar() {
   return (
     <nav className="container justify-between py-6">
-      <ul className="hidden lg:block lg:justify-between gap-20">
+      <ul className="hidden lg:flex lg:justify-between gap-20">
         <Link to={Pages.MEET_ME}>
           <li>Meet me</li>
         </Link>
@@ -17,7 +17,7 @@ export default function Navbar() {
         <img src={Logo} alt="" />
         <h4 className="font-bold text-lg">Faydeesigns</h4>
       </Link>
-      <ul className="hidden lg:block lg:justify-between gap-20">
+      <ul className="hidden lg:flex lg:justify-between gap-20">
         <li>Behance</li>
         <li>Dribble</li>
         <li>Instagram</li>
