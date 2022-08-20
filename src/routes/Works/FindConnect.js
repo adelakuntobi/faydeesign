@@ -7,6 +7,7 @@ import Findconnect3 from "../../assets/images/findconnect/findconnect3.svg";
 import Findconnect4 from "../../assets/images/findconnect/findconnect4.svg";
 
 import NextSection from '../../components/NextSection';
+import { CRYSTAL_PALACE, WARENEXT } from '../../utils/pageUrl';
 
 export default function FindConnect() {
   return (
@@ -22,7 +23,8 @@ export default function FindConnect() {
         <img src={Findconnect4} alt="" />
       </section>
 
-    <NextSection previous="Warenext" next="Crystal Palace" />
+    <NextSection previous="Warenext" next="Crystal Palace"
+    prevRoute={WARENEXT} nextRoute={CRYSTAL_PALACE} />
        
     </div>
   )

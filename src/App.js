@@ -9,10 +9,13 @@ import { useEffect, useState } from 'react';
 import Logo from "./assets/images/logo.svg";
 import Loader from './components/Loader';
 import Meet from './routes/Meet';
+
+// Routes
 import Chekkit from './routes/Works/Chekkit';
 import FindConnect from './routes/Works/FindConnect';
 import Warenext from './routes/Works/Warenext';
 import CrystalPalace from './routes/Works/CrystalPalace';
+import Flitwire from './routes/Works/Flitwire';
 
 export default function App() {
   const [loader, setLoader] = useState(false)
@@ -32,6 +35,7 @@ export default function App() {
           <Route exact path={PageURL.HOMEPAGE} element={<Homepage />} />
           <Route exact path={PageURL.MEET_ME} element={<Meet />} />
           <Route exact path={PageURL.CHEKKIT_APP} element={<Chekkit />} />
+          <Route exact path={PageURL.FLITWIRE} element={<Flitwire />} />
           <Route exact path={PageURL.FIND_CONNECT} element={<FindConnect />} />
           <Route exact path={PageURL.WARENEXT} element={<Warenext />} />
           <Route exact path={PageURL.CRYSTAL_PALACE} element={<CrystalPalace />} />

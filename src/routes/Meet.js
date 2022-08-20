@@ -80,4 +80,16 @@ export const TextLight = styled.div`
     border-radius: 1rem;
     font-weight: 700;
   }
+
+  @media (max-width: 1024px) {
+    h3{
+      font-size: 28px;
+    line-height: 36px;
+    margin: 7px 0;
+    }
+    span{
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
 `;

@@ -7,6 +7,7 @@ import Warenext4 from "../../assets/images/warenext/warenext4.svg";
 
 
 import NextSection from '../../components/NextSection'
+import { FIND_CONNECT, FLITWIRE } from "../../utils/pageUrl";
 import { HeadingSection } from './Chekkit'
 
 export default function Warenext() {
@@ -26,8 +27,8 @@ export default function Warenext() {
         <img src={Warenext4} alt="" />
       </section>
 
-      <NextSection previous="Flitwire" next="FindConnect" />
-
+      <NextSection previous="Flitwire" next="FindConnect"
+      prevRoute={FLITWIRE} nextRoute={FIND_CONNECT} />
     </div>
   )
 }

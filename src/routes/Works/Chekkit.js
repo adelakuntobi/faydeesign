@@ -13,6 +13,8 @@ import Solution from "../../assets/images/chekkit/solution.svg";
 import Architecture from "../../assets/images/chekkit/architecture.svg";
 import UserFlow from "../../assets/images/chekkit/user-flow.svg";
 import Sketches from "../../assets/images/chekkit/sketches.svg";
+import NextSection from "../../components/NextSection";
+import { FLITWIRE, HOMEPAGE } from "../../utils/pageUrl";
 
 
 export default function Chekkit() {
@@ -142,6 +144,10 @@ export default function Chekkit() {
           )
         })
       }
+
+      <NextSection previous="Return Home" next="Flitwire"
+        prevRoute={HOMEPAGE} nextRoute={FLITWIRE} />
+
     </ComponentWithBigP>
   )
 }

@@ -4,6 +4,7 @@ import NextSection from "../../components/NextSection";
 import CrystalPalace1 from "../../assets/images/crystalpalace/crystalpalace1.svg";
 import CrystalPalace2 from "../../assets/images/crystalpalace/crystalpalace2.svg";
 import CrystalPalace7 from "../../assets/images/crystalpalace/crystalpalace7.svg";
+import { FIND_CONNECT, HOMEPAGE } from "../../utils/pageUrl";
 
 export default function CrystalPalace() {
   return (
@@ -20,7 +21,9 @@ export default function CrystalPalace() {
       <img src={CrystalPalace7} alt="" />
 
 
-      <NextSection next="Return Home" previous="FindConnect" />
+      <NextSection 
+      next="Return Home" previous="FindConnect" 
+      prevRoute={FIND_CONNECT} nextRoute={HOMEPAGE} />
 
     </div>
   )

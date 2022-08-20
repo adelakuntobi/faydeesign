@@ -2,7 +2,7 @@
 export default function Footer() {
   return (
     <footer className="bg-[#290848] text-white py-10">
-      <section className="container justify-between mt-8">
+      <section className="container flex  flex-col lg:flex-row gap-y-12 justify-between mt-8">
         <div className="text-3xl">
           <h3 className="font-bold mb-3">Have an idea?</h3>
           <p>Reach out to me</p>
