@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+import * as Pages from "../utils/pageUrl"
 
 export default function Footer() {
   return (
@@ -8,15 +10,19 @@ export default function Footer() {
           <p>Reach out to me</p>
         </div>
         <div>
-          <ul className="items-center gap-10 mb-5">
-            <li>Meet me</li>
-            <li>Works</li>
+          <ul className="items-center gap-20 mb-5">
+            <Link to={Pages.MEET_ME}>
+              <li>Meet me</li>
+            </Link>
+            <Link to={Pages.WORKS}>
+              <li>Works</li>
+            </Link>
             <li>Resume</li>
           </ul>
-          <ul className="items-center gap-10">
-            <li>Behance</li>
-            <li>Dribble</li>
-            <li>Instagram</li>
+          <ul className="items-center gap-20">
+          <li><a target='_blank' rel="noreferrer" href="https://www.behance.net/faidatakinwale">Behance</a></li>
+        <li><a target='_blank' rel="noreferrer" href="https://dribbble.com/faydee">Dribbble</a></li>
+        <li><a target='_blank' rel="noreferrer" href="https://instagram.com/faydeesigns">Instagram</a></li>
           </ul>
         </div>
       </section>

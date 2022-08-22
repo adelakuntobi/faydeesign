@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import Logo from "../assets/images/logo.svg"
 import * as Pages from "../utils/pageUrl"
+import Logo from "../assets/images/logo.svg"
 export default function Navbar() {
   return (
     <nav className="container justify-between py-6">
@@ -18,9 +18,9 @@ export default function Navbar() {
         <h4 className="font-bold text-lg">Faydeesigns</h4>
       </Link>
       <ul className="hidden lg:flex lg:justify-between gap-20">
-        <li>Behance</li>
-        <li>Dribble</li>
-        <li>Instagram</li>
+        <li><a target='_blank' rel="noreferrer" href="https://www.behance.net/faidatakinwale">Behance</a></li>
+        <li><a target='_blank' rel="noreferrer" href="https://dribbble.com/faydee">Dribbble</a></li>
+        <li><a target='_blank' rel="noreferrer" href="https://instagram.com/faydeesigns">Instagram</a></li>
       </ul>
     </nav>
   )

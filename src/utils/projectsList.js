@@ -92,12 +92,12 @@ export const SideProjects = [
   {
     title: "Behance",
     description: "Check out some of my works on Behance. Most of the projects were carried out using Balsamiq, Figma, Adobe Photshop, and Ilustrator.",
-    link: "https://www.behance.net/joseph_j_m"
+    link: "https://www.behance.net/faidatakinwale"
   },
   {
     title: "Dribbble",
     description: "Here are some of my works on Dribbble. Most of the projects were carried out using Figma, Adobe Photshop, and Ilustrator.",
-    link: "https://www.behance.net/joseph_j_m"
+    link: "https://dribbble.com/faydee"
   },
   {
     title: "Instagram",

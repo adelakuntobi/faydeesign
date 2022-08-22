@@ -20,8 +20,8 @@ export default function Homepage() {
           <span>Portfolio</span>
           <h3>Selected Projects.</h3>
         </TextLight>
-        <div className="flex flex-col lg:flex-row gap-x-20 my-12">
-          <div className="w-full lg:w-1/2 flex gap-y-10 flex-col">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 my-12">
+          <div className="w-full flex gap-y-10 flex-col">
             {
               ProjectsList.leftSide.map((project, index) => {
                 return (
@@ -43,7 +43,7 @@ export default function Homepage() {
               })
             }
           </div>
-          <div className="w-full lg:w-1/2 lg:mt-14 flex gap-y-10 flex-col">
+          <div className="w-full lg:mt-14 flex gap-y-10 flex-col">
             {
               ProjectsList.rightSide.map((project, index) => {
                 return (
