@@ -7,5 +7,7 @@ export const RESUME = "/resume";
 export const CHEKKIT_APP = "/projects/chekkit-app";
 export const WARENEXT = "/projects/warenext";
 export const FLITWIRE = "/projects/flitwire";
+export const PETAID = "/projects/petaid";
+export const SMART_GARDEN = "/projects/smartgarden";
 export const FIND_CONNECT = "/projects/findconnect";
 export const CRYSTAL_PALACE = "/projects/crystal-palace";

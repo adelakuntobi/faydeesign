@@ -1,30 +1,27 @@
 import styled from "styled-components";
-import Faydee from "../assets/images/faydee.svg";
+// import Faydee from "../assets/images/faydee.svg";
 
 export default function Meet() {
   return (
     <div className="container flex">
-      <div className="w-full lg:w-8/12 pt-8">
+      <div className="w-full pt-8">
         <TextLight><span>Meet me</span></TextLight>
         <H1WithGradient className="">Interface<span>,</span> experience<span>,</span> Product<span>.</span></H1WithGradient>
         <DivWithPTag>
           <p>
-            I am a self-taught designer who uses design thinking, user research, and experience strategy to create user centric products. I currently work as a Product Designer at <a className="font-bold cursor-pointer hover:text-primary duration-700 " href="https://chekkitapp.com" rel="noreferrer" target="_blank">Chekkit Technologies</a>, saving lives by helping people differentiate original products from fake ones.
+           Hey! nice to meet you 👋 I am Faidat, but I am fondly called <em>Faydee</em>. I am a self-taught designer who uses design thinking, user research, and experience strategy to create user-centric products that help solves human problems.I aspire to solve user problems by creating unique, significant solutions that improve users' overall digital experiences. I am passionate about creating impactful products that balance business goals and users’ needs. I am currently crafting exciting products at <a className="font-bold cursor-pointer hover:text-primary duration-700 " href="https://chekkitapp.com" rel="noreferrer" target="_blank">Chekkit Technologies</a>,
           </p>
           <p>
-            My current position as a Designer has allowed me to hone my design skills while also participating in design thinking, sketching, user research, interaction and prototyping, product wireframing, visualization, testing, analyzing, communicating and frontend development (HTML and CSS). I am a skilled user of design software such as Figma and Adobe products such as PS, Ai, and XD.
+          I started my tech career as a front-end developer before I ventured into product design full-time, which gives me an edge to communicate better with developers and also have an idea of what the functional part of products looks like. I have a proven track record of success, which I attribute to my ability to collaborate closely with team members and clients to fully grasp their needs and goals. I am proficient across various design tools such as Figma and Adobe Creative Suite. Experienced in Fintech, Healthtech, Logistics, Edtech, and more.
           </p>
           <p>
-            I have been a product designer for around three years, and throughout that time I have developed a strong understanding of the design process and learned how to make things that are both functional and user-friendly. I aspire to solve user problems by creating unique, significant solutions that improve users' overall digital and offline experiences. I have a proven track record of success, which I attribute to my ability to collaborate closely with team members and clients to fully grasp their needs and goals.
-          </p>
-          <p>
-            When I am off the canvas, I help upcoming designers grow through thought leadership content across my social media channels.
+          I enjoy sleeping, making new friends, and traveling. I have recently launched my design page, <a className="font-bold cursor-pointer hover:text-primary duration-700 " href="https://www.instagram.com/faydeesigns/" rel="noreferrer" target="_blank">@Faydeesigns</a> on Instagram to train new designers just getting started in their design journey. I find it immensely rewarding and a way to give back to the design community. I also generally participate in speaking activities to share my journey into the tech space and design talks.
           </p>
         </DivWithPTag>
       </div>
-      <div>
+      {/* <div>
         <img src={Faydee} alt="" />
-      </div>
+      </div> */}
     </div>
   )
 }

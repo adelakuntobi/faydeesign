@@ -113,6 +113,13 @@ export default function Homepage() {
 const Project = styled.div`
   background-color: #ffffff;
   border-radius: 20px;
+
+  img{
+    transition-duration: 600ms;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
 `;
 
 const Skill = styled.div`

@@ -16,6 +16,7 @@ import FindConnect from './routes/Works/FindConnect';
 import Warenext from './routes/Works/Warenext';
 import CrystalPalace from './routes/Works/CrystalPalace';
 import Flitwire from './routes/Works/Flitwire';
+import PetAid from './routes/Works/PetAid';
 
 export default function App() {
   const [loader, setLoader] = useState(false)
@@ -35,6 +36,7 @@ export default function App() {
           <Route exact path={PageURL.HOMEPAGE} element={<Homepage />} />
           <Route exact path={PageURL.MEET_ME} element={<Meet />} />
           <Route exact path={PageURL.CHEKKIT_APP} element={<Chekkit />} />
+          <Route exact path={PageURL.PETAID} element={<PetAid />} />
           <Route exact path={PageURL.FLITWIRE} element={<Flitwire />} />
           <Route exact path={PageURL.FIND_CONNECT} element={<FindConnect />} />
           <Route exact path={PageURL.WARENEXT} element={<Warenext />} />
