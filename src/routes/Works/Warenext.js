@@ -1,9 +1,9 @@
 
 // Images
-import Warenext1 from "../../assets/images/warenext/warenext1.svg";
-import Warenext2 from "../../assets/images/warenext/warenext2.svg";
-import Warenext3 from "../../assets/images/warenext/warenext3.svg";
-import Warenext4 from "../../assets/images/warenext/warenext4.svg";
+import Warenext1 from "../../assets/images/warenext/warenext1.png";
+import Warenext2 from "../../assets/images/warenext/warenext2.png";
+import Warenext3 from "../../assets/images/warenext/warenext3.png";
+import Warenext4 from "../../assets/images/warenext/warenext4.png";
 
 
 import NextSection from '../../components/NextSection'
