@@ -20,13 +20,13 @@ export default function Homepage() {
           <span>Portfolio</span>
           <h3>Selected Projects.</h3>
         </TextLight>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 my-12">
+        <div className="w-full sm:w-8/12 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-20 my-12">
           <div className="w-full flex gap-y-10 flex-col">
             {
               ProjectsList.leftSide.map((project, index) => {
                 return (
                   <Project key={index} className="">
-                    <img src={project.img} alt={project.title} className="w-full" />
+                    <img src={project.img} alt={project.title} className={`${project.route ? "hover:scale-105" : "cursor-not-allowed" } w-full`} />
                     <div className="project-info p-8">
                       <h4 className="text-lg lg:text-2xl font-bold">{project.title}</h4>
                       <ul className='flex flex-wrap list-disc gap-6 py-4'>
@@ -36,7 +36,7 @@ export default function Homepage() {
                         )}
                       </ul>
                       <p>{project.description}</p>
-                      <a href={project.route} className="text-primary text-right flex items-center justify-end gap-2 pt-8">{project.linkText} <FiArrowUpRight /></a>
+                      <a href={project.route} className="text-primary text-right flex items-center justify-end gap-2 pt-8">{project.linkText} {project.route && <FiArrowUpRight />}</a>
                     </div>
                   </Project>
                 )
@@ -48,7 +48,7 @@ export default function Homepage() {
               ProjectsList.rightSide.map((project, index) => {
                 return (
                   <Project key={index} className="">
-                    <img src={project.img} alt={project.title} className="w-full" />
+                    <img src={project.img} alt={project.title} className={`${project.route ? "hover:scale-105" : "cursor-not-allowed" } w-full`} />
                     <div className="project-info p-8">
                       <h4 className="text-lg lg:text-2xl font-bold">{project.title}</h4>
                       <ul className='flex w-screen list-disc gap-6 py-4'>
@@ -58,7 +58,7 @@ export default function Homepage() {
                         )}
                       </ul>
                       <p>{project.description}</p>
-                      <a href={project.route} className="text-primary no-underline text-right flex items-center justify-end gap-2 pt-8">{project.linkText} <FiArrowUpRight /></a>
+                      <a href={project.route} className="text-primary no-underline text-right flex items-center justify-end gap-2 pt-8">{project.linkText} {project.route && <FiArrowUpRight />}</a>
                     </div>
                   </Project>
                 )
@@ -116,9 +116,7 @@ const Project = styled.div`
 
   img{
     transition-duration: 600ms;
-    &:hover{
-      transform: scale(1.1);
-    }
+ 
   }
 `;
 
