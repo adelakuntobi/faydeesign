@@ -41,6 +41,7 @@ export default function App() {
           <Route exact path={PageURL.FIND_CONNECT} element={<FindConnect />} />
           <Route exact path={PageURL.WARENEXT} element={<Warenext />} />
           <Route exact path={PageURL.CRYSTAL_PALACE} element={<CrystalPalace />} />
+          <Route exact path="*" element={<Homepage />} />
         </Routes>
         <Footer />
       </div>

@@ -4,8 +4,11 @@ import styled from "styled-components";
 import { ProjectsList, SideProjects, Skills } from "../utils/projectsList";
 
 import { FiArrowUpRight } from "react-icons/fi";
+// import { Link } from "react-scroll"
+import * as Scroll from 'react-scroll';
 
 export default function Homepage() {
+  const Element = Scroll.Element;
   return (
     <main className="container">
       <header className="text-center py-20">
@@ -20,52 +23,54 @@ export default function Homepage() {
           <span>Portfolio</span>
           <h3>Selected Projects.</h3>
         </TextLight>
-        <div className="w-full sm:w-8/12 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-20 my-12">
-          <div className="w-full flex gap-y-10 flex-col">
-            {
-              ProjectsList.leftSide.map((project, index) => {
-                return (
-                  <Project key={index} className="">
-                    <img src={project.img} alt={project.title} className={`${project.route ? "hover:scale-105" : "cursor-not-allowed" } w-full`} />
-                    <div className="project-info p-8">
-                      <h4 className="text-lg lg:text-2xl font-bold">{project.title}</h4>
-                      <ul className='flex flex-wrap list-disc gap-6 py-4'>
-                        {project.features.map((feature, index) => {
-                          return <li className='first-of-type:list-none font-bold list' key={index}>{feature}</li>
-                        }
-                        )}
-                      </ul>
-                      <p>{project.description}</p>
-                      <a href={project.route} className="text-primary text-right flex items-center justify-end gap-2 pt-8">{project.linkText} {project.route && <FiArrowUpRight />}</a>
-                    </div>
-                  </Project>
-                )
-              })
-            }
+        <Element name="works" id="works">
+          <div className="w-full sm:w-8/12 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-20 my-12">
+            <div className="w-full flex gap-y-10 flex-col">
+              {
+                ProjectsList.leftSide.map((project, index) => {
+                  return (
+                    <Project key={index} className="">
+                      <img src={project.img} alt={project.title} className={`${project.route ? "hover:scale-105" : "cursor-not-allowed"} w-full`} />
+                      <div className="project-info p-8">
+                        <h4 className="text-lg lg:text-2xl font-bold">{project.title}</h4>
+                        <ul className='flex flex-wrap list-disc gap-6 py-4'>
+                          {project.features.map((feature, index) => {
+                            return <li className='first-of-type:list-none font-bold list' key={index}>{feature}</li>
+                          }
+                          )}
+                        </ul>
+                        <p>{project.description}</p>
+                        <a href={project.route} className="text-primary text-right flex items-center justify-end gap-2 pt-8">{project.linkText} {project.route && <FiArrowUpRight />}</a>
+                      </div>
+                    </Project>
+                  )
+                })
+              }
+            </div>
+            <div className="w-full lg:mt-14 flex gap-y-10 flex-col">
+              {
+                ProjectsList.rightSide.map((project, index) => {
+                  return (
+                    <Project key={index} className="">
+                      <img src={project.img} alt={project.title} className={`${project.route ? "hover:scale-105" : "cursor-not-allowed"} w-full`} />
+                      <div className="project-info p-8">
+                        <h4 className="text-lg lg:text-2xl font-bold">{project.title}</h4>
+                        <ul className='flex w-screen list-disc gap-6 py-4'>
+                          {project.features.map((feature, index) => {
+                            return <li className='first-of-type:list-none font-bold list' key={index}>{feature}</li>
+                          }
+                          )}
+                        </ul>
+                        <p>{project.description}</p>
+                        <a href={project.route} className="text-primary no-underline text-right flex items-center justify-end gap-2 pt-8">{project.linkText} {project.route && <FiArrowUpRight />}</a>
+                      </div>
+                    </Project>
+                  )
+                })
+              }
+            </div>
           </div>
-          <div className="w-full lg:mt-14 flex gap-y-10 flex-col">
-            {
-              ProjectsList.rightSide.map((project, index) => {
-                return (
-                  <Project key={index} className="">
-                    <img src={project.img} alt={project.title} className={`${project.route ? "hover:scale-105" : "cursor-not-allowed" } w-full`} />
-                    <div className="project-info p-8">
-                      <h4 className="text-lg lg:text-2xl font-bold">{project.title}</h4>
-                      <ul className='flex w-screen list-disc gap-6 py-4'>
-                        {project.features.map((feature, index) => {
-                          return <li className='first-of-type:list-none font-bold list' key={index}>{feature}</li>
-                        }
-                        )}
-                      </ul>
-                      <p>{project.description}</p>
-                      <a href={project.route} className="text-primary no-underline text-right flex items-center justify-end gap-2 pt-8">{project.linkText} {project.route && <FiArrowUpRight />}</a>
-                    </div>
-                  </Project>
-                )
-              })
-            }
-          </div>
-        </div>
+        </Element>
       </section>
 
       <section>
@@ -92,6 +97,8 @@ export default function Homepage() {
           <h3 className="">Ongoing Side Projects.</h3>
           <p className="font-medium">When I am not working, I share design-related stuff to assist budding designers who are just starting out in their careers. Check out my design shots and feel free to contact me; I'd be delighted to connect with you.</p>
         </TextLight>
+
+
         <div className="py-6 flex flex-col lg:flex-row gap-6 items-center">
           {
             SideProjects.map((project, index) => {

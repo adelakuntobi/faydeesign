@@ -1,7 +1,37 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import * as Pages from "../utils/pageUrl"
-
+import { scroller } from 'react-scroll';
 export default function Footer() {
+  const path = useLocation().pathname;
+  const history = useNavigate();
+  // const scroller = Scroll.scroller;
+
+  const scroll = async (name) => {
+    if (path === '/') {
+      console.log(name)
+      scroller.scrollTo(name, {
+        spy: true,
+        smooth: true,
+        offset: -70,
+        duration: 1500,
+        isDynamic: true,
+        ignoreCancelEvents: false,
+        spyThrottle: 500,
+      });
+    }
+    else {
+      await history('/');
+      await scroller.scrollTo(name, {
+        spy: true,
+        smooth: true,
+        offset: -70,
+        duration: 1500,
+        isDynamic: true,
+        ignoreCancelEvents: false,
+        spyThrottle: 500,
+      });
+    }
+  };
   return (
     <footer className="bg-[#290848] text-white py-10">
       <section className="container flex  flex-col lg:flex-row gap-y-12 justify-between mt-8">
@@ -14,15 +44,14 @@ export default function Footer() {
             <Link to={Pages.MEET_ME}>
               <li>Meet me</li>
             </Link>
-            <Link to={Pages.WORKS}>
-              <li>Works</li>
-            </Link>
+            <li onClick={() => scroll("works")}>Works</li>
+
             <li>Resume</li>
           </ul>
           <ul className="items-center gap-20">
-          <li><a target='_blank' rel="noreferrer" href="https://www.behance.net/faidatakinwale">Behance</a></li>
-        <li><a target='_blank' rel="noreferrer" href="https://dribbble.com/faydee">Dribbble</a></li>
-        <li><a target='_blank' rel="noreferrer" href="https://instagram.com/faydeesigns">Instagram</a></li>
+            <li><a target='_blank' rel="noreferrer" href="https://www.behance.net/faidatakinwale">Behance</a></li>
+            <li><a target='_blank' rel="noreferrer" href="https://dribbble.com/faydee">Dribbble</a></li>
+            <li><a target='_blank' rel="noreferrer" href="https://instagram.com/faydeesigns">Instagram</a></li>
           </ul>
         </div>
       </section>

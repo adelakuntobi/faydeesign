@@ -1,6 +1,6 @@
 export const HOMEPAGE = "/";
 export const MEET_ME = "/meet-me";
-export const WORKS = "/works";
+// export const WORKS = "/works";
 export const RESUME = "/resume";
 
 // Projects
