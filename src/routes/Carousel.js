@@ -1,34 +1,35 @@
 import Slider from 'infinite-react-carousel';
 import Faydee1 from "../assets/images/1.jpg"
+import Faydee2 from "../assets/images/2.JPG"
+import Faydee3 from "../assets/images/3.JPG"
+import Faydee4 from "../assets/images/4.jpeg"
+import Faydee5 from "../assets/images/5.jpeg"
+import Faydee6 from "../assets/images/6.jpeg"
+
 export default function Carousel() {
   const settings =  {
     autoplay: true,
     autoplaySpeed: 10000,
     centerMode: true,
-    centerPadding: 70,
-    gutter: 20,
+    centerPadding: 100,
+    gutter: 50,
     shift: 10,
-    slidesToShow: 3
+    slidesToShow: 3,
+    adaptiveHeight: true,
+    className: "my-10"
   };
   return (
     <div>
-      <span>CustomSlider</span>
       <Slider { ...settings }>
-        <div>
-          <img src={Faydee1} alt="" />
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
+        {/* <div> */}
+          <div><img className='w-full h-full px-3' src={Faydee1} alt="" /></div>
+          <div><img className='w-full h-full px-3' src={Faydee2} alt="" /></div>
+          <div><img className='w-full h-full px-3' src={Faydee3} alt="" /></div>
+          <div><img className='w-full h-full px-3' src={Faydee4} alt="" /></div>
+          <div><img className='w-full h-full px-3' src={Faydee5} alt="" /></div>
+          <div><img className='w-full h-full px-3' src={Faydee6} alt="" /></div>
+        {/* </div> */}
+       
       </Slider>
     </div>
   );

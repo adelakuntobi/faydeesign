@@ -1,24 +1,26 @@
 import styled from "styled-components";
+import Carousel from "./Carousel";
 // import Faydee from "../assets/images/faydee.svg";
 
 export default function Meet() {
   return (
-    <div className="container flex">
+    <div className="container">
       <div className="w-full pt-8">
         <TextLight><span>Meet me</span></TextLight>
         <H1WithGradient className="">Interface<span>,</span> experience<span>,</span> Product<span>.</span></H1WithGradient>
         <DivWithPTag>
           <p>
-           Hey! nice to meet you 👋 I am Faidat, but I am fondly called <em>Faydee</em>. I am a self-taught designer who uses design thinking, user research, and experience strategy to create user-centric products that help solves human problems.I aspire to solve user problems by creating unique, significant solutions that improve users' overall digital experiences. I am passionate about creating impactful products that balance business goals and users’ needs. I am currently crafting exciting products at <a className="font-bold cursor-pointer hover:text-primary duration-700 " href="https://chekkitapp.com" rel="noreferrer" target="_blank">Chekkit Technologies</a>,
+            Hey! nice to meet you 👋 I am Faidat, but I am fondly called <em>Faydee</em>. I am a self-taught designer who uses design thinking, user research, and experience strategy to create user-centric products that help solves human problems.I aspire to solve user problems by creating unique, significant solutions that improve users' overall digital experiences. I am passionate about creating impactful products that balance business goals and users’ needs. I am currently crafting exciting products at <a className="font-bold cursor-pointer hover:text-primary duration-700 " href="https://chekkitapp.com" rel="noreferrer" target="_blank">Chekkit Technologies</a>,
           </p>
           <p>
-          I started my tech career as a front-end developer before I ventured into product design full-time, which gives me an edge to communicate better with developers and also have an idea of what the functional part of products looks like. I have a proven track record of success, which I attribute to my ability to collaborate closely with team members and clients to fully grasp their needs and goals. I am proficient across various design tools such as Figma and Adobe Creative Suite. Experienced in Fintech, Healthtech, Logistics, Edtech, and more.
+            I started my tech career as a front-end developer before I ventured into product design full-time, which gives me an edge to communicate better with developers and also have an idea of what the functional part of products looks like. I have a proven track record of success, which I attribute to my ability to collaborate closely with team members and clients to fully grasp their needs and goals. I am proficient across various design tools such as Figma and Adobe Creative Suite. Experienced in Fintech, Healthtech, Logistics, Edtech, and more.
           </p>
           <p>
-          I enjoy sleeping, making new friends, and traveling. I have recently launched my design page, <a className="font-bold cursor-pointer hover:text-primary duration-700 " href="https://www.instagram.com/faydeesigns/" rel="noreferrer" target="_blank">@Faydeesigns</a> on Instagram to train new designers just getting started in their design journey. I find it immensely rewarding and a way to give back to the design community. I also generally participate in speaking activities to share my journey into the tech space and design talks.
+            I enjoy sleeping, making new friends, and traveling. I have recently launched my design page, <a className="font-bold cursor-pointer hover:text-primary duration-700 " href="https://www.instagram.com/faydeesigns/" rel="noreferrer" target="_blank">@Faydeesigns</a> on Instagram to train new designers just getting started in their design journey. I find it immensely rewarding and a way to give back to the design community. I also generally participate in speaking activities to share my journey into the tech space and design talks.
           </p>
         </DivWithPTag>
       </div>
+      <Carousel />
       {/* <div>
         <img src={Faydee} alt="" />
       </div> */}
