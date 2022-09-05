@@ -57,8 +57,8 @@ export const ProjectsList = {
       title: "PetAid",
       description: "PetAid allows pet owners to book appointment with  vets, request consultation, purchase pet accessories, and also allow for pet-groomer interaction all in a single platform.",
       features: ["UI Design", "Telemedicine", "Website"],
-      linkText: "Preview Screens",
-      route: Pages.PETAID
+      linkText: "Coming Soon",
+      // route: Pages.PETAID  
     },
     {
       img: Flitwire,

@@ -13,6 +13,13 @@ import Solution from "../../assets/images/chekkit/solution.svg";
 import Architecture from "../../assets/images/chekkit/architecture.svg";
 import UserFlow from "../../assets/images/chekkit/user-flow.svg";
 import Sketches from "../../assets/images/chekkit/sketches.svg";
+import Onboarding from "../../assets/images/chekkit/onboarding.svg";
+import Homepage from "../../assets/images/chekkit/homepage.svg";
+import Adding from "../../assets/images/chekkit/adding-product.svg";
+import Tracking from "../../assets/images/chekkit/tracking.svg";
+import Rewards from "../../assets/images/chekkit/rewards.svg";
+
+
 import NextSection from "../../components/NextSection";
 import { FLITWIRE, HOMEPAGE } from "../../utils/pageUrl";
 
@@ -145,6 +152,36 @@ export default function Chekkit() {
         })
       }
 
+      <WithoutSpacing>
+        <h2>final visual design</h2>
+        <h4 >Creating a seamless onboarding process to improve the retention rate of registration.</h4>
+        <p>The splash screen, a series of sliding screens outlining the main features of the application, and the registration procedure are the first elements of the onboarding solution.
+          For the splash screen, I chose to use symbols to represent scan, airtime, and cash as well as a picture of a person using their phone to scan and also shopping with the logo in the middle, which leads to a welcome page that gives you the choice to log in or sign up. The user can also just continue to scan from the welcome screen.</p>
+        <p>In contrast to the outdated designs, I chose a more contemporary strategy for the sliding screens. People can immediately relate to what a picture says, unlike scan icons, which not everyone can recognise. For this reason, I chose an image of a person scanning a product.</p>
+        <p>Since users are not all situated in Nigeria, I added a location field to the onboarding registration form. I also included a screen where users could obtain a one-time password to confirm their account using the phone number they had previously supplied. Users have also commented that they don't know what the PIN area is for when they sign up; thus, in my redesign, I used an icon in addition to words to clarify what the pin is for. Finally, I made sure I rectified the old design's neglect for users who forget their passwords.</p>
+        <img src={Onboarding} alt="" />
+        <h4 >Redesigning the homepage and adding more engaging functionalities.</h4>
+        <p>I choose a design that is more up to date and has more functionality than the present design. Users would want to see certain features that were not included in the existing designs. With the help of the feedback I gathered, I made sure to keep the wallet balance while improving the appearance and ensuring that users could quickly use the scan button. Users also expressed dissatisfaction with not receiving notifications, so I added that to the homepage and other pages. Furthermore, a user should be able to access their account or profile from any tab on the application.</p>
+        <p>Moving on to the Survey section, I included a collection of surveys from various brands on the homepage. I made care to provide brief but precise information about the surveys, such as the duration, amount of questions each survey contains, and the linked prize, on each survey card in addition to a survey tracker that allows users to keep track of the progress of each survey (the level they are in each survey). I included two more screens that the earlier designs did not have.</p>
+        <img src={Homepage} alt="" />
+        <h4>Reworking the product authentication interface and the procedures needed to confirm a product's authenticity.</h4>
+        <p>The early design required many steps to confirm a product's authenticity. The basic design missed several crucial features and employed poor UX design, which had a negative impact on the experiences of many users. I developed solutions for the redesign based on research analysis and fundamental design concepts to establish a suitable layout structure with hierarchy, usability, and accessibility in mind.</p>
+        <p>On scan completion, the outcome is either positive or negative. I took sure to create interactive popups for both successes and failures on the application for a better user experience.</p>
+        <p>After a product has been verified, the confirmation message is the product information screen, which should provide comprehensive information about the product being verified. In comparison to the previous design, I have incorporated a few more significant details that the user will find extremely beneficial, such as the medicine pamphlets in case they require further important information.</p>
+        <img src={Adding} alt="" />
+        <h4>Keeping records of activities done on scanning as well as tracking report status.</h4>
+        <p>One of the shortcomings of the app was pointed out to be the scan and report history, where users were unable to keep track of their scan and report activity. This issue was resolved by combining the report and scan operations into a single screen so that users could simultaneously monitor both actions. They can even go farther to discover additional details on a certain scan or report history.  Tracking of submitted reports to know the status of each report was well taken care of as well</p>
+        <img src={Tracking} alt="" />
+        <h4>Improving rewards and points into the scanning and survey-taking functions.</h4>
+        <p>Chekkit participates in reward programs, one of the best ways to keep users returning. I carefully enhanced the points redemption process and kept track of how points were earned and used.</p>
+        <img src={Rewards} alt="" />
+      </WithoutSpacing>
+
+      <SectionAndImg>
+        <h2>Results and metrics</h2>
+        <p>The redesign enhanced user experience and resulted in an increase in product authentications; our registration retention rate climbed by 80%. as the number of drop-offs during onboarding was low compared to before.  We also received over 100k product scans from consumers, up from 4k when I first started the revamp. Also, reviews from our apple appstore and google playstore was pretty impressive.</p>
+      </SectionAndImg>
+
       <NextSection previous="Return Home" next="Flitwire"
         prevRoute={HOMEPAGE} nextRoute={FLITWIRE} />
 
@@ -175,9 +212,11 @@ const Options = styled.div`
 `;
 
 export const ComponentWithBigP = styled.div`
-  p{
-    font-size: 20px;
-    line-height: 1.5;
+  @media (min-width: 1024px) { 
+    p{
+      font-size: 20px;
+      line-height: 1.5;
+    }
   }
 `;
 
@@ -203,3 +242,17 @@ const SectionAndImg = styled.section`
   }
 `;
 
+const WithoutSpacing = styled(SectionAndImg)`
+    h4{
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: #242424;
+    }
+    p{
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+`
