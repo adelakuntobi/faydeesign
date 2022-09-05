@@ -22,7 +22,6 @@ export default function Navbar() {
   const scroll = async (name) => {
     setOpenNav(false)
     if (path === '/') {
-      console.log(name)
       scroller.scrollTo(name, {
         spy: true,
         smooth: true,

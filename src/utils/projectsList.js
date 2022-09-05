@@ -170,6 +170,6 @@ export const SideProjects = [
   {
     title: "Instagram",
     description: "I have launched my design page on Instagram with the sole purpose of training new designers just getting started in their design journey.",
-    link: "https://www.behance.net/joseph_j_m"
+    link: "https://www.instagram.com/faydeesigns/"
   },
 ]

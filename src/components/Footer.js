@@ -8,7 +8,6 @@ export default function Footer() {
 
   const scroll = async (name) => {
     if (path === '/') {
-      console.log(name)
       scroller.scrollTo(name, {
         spy: true,
         smooth: true,

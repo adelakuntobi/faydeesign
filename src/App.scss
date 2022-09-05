@@ -8,12 +8,11 @@ body{
 }
 
 section{
-  @apply my-20;
+  @apply my-8 md:my-14 lg:my-20;
 }
 
 .bg-primary-text{
-  @apply text-primary bg-secondary;
-  padding: 1rem;
+  @apply text-primary bg-secondary p-3 lg:p-4 text-sm lg:text-base;
   display: inline-block;
   border-radius: 1rem;
   font-weight: 700;

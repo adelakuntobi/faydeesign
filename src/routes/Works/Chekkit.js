@@ -69,7 +69,7 @@ export default function Chekkit() {
       <HeadingSection>
         <p className='text-primary'>A redesign of ChekkitApp</p>
         <h3 className=''>A counterfeit detection and reporting application to protect people from fraudulent products.</h3>
-        <ul className='items-center gap-6 my-6'>
+        <ul className='items-center flex-wrap flex-row gap-4 lg:gap-6 my-6'>
           <li className='bg-primary-text'>UX Design</li>
           <li className='bg-primary-text'>UI Design</li>
           <li className='bg-primary-text'>Prototype &amp; Testing </li>
@@ -99,11 +99,11 @@ export default function Chekkit() {
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10">
         <div>
           <h2 className="mb-6">Role</h2>
-          <p className="leading-8">As a product designer at Chekkit Technologies, I was responsible for redesigning the brand, overall experience, and deliverables such as user stories, user flow, information architecture, wireframes (lo-fi & hifi) visual design, and a clickable prototype in order to improve and grow the number of monthly and daily active users, as well as installation usage, on the ChekkitApp.</p>
+          <p className="lg:leading-8">As a product designer at Chekkit Technologies, I was responsible for redesigning the brand, overall experience, and deliverables such as user stories, user flow, information architecture, wireframes (lo-fi & hifi) visual design, and a clickable prototype in order to improve and grow the number of monthly and daily active users, as well as installation usage, on the ChekkitApp.</p>
         </div>
         <div>
           <h2 className="mb-6">Objective</h2>
-          <ol className=" list-decimal pl-5 leading-8">
+          <ol className=" list-decimal pl-5 lg:leading-8">
             <li>Identify usability issues through user research.</li>
             <li>Create and validate design solutions.</li>
             <li>Simplify and improve the onboarding process for the users</li>
@@ -240,19 +240,33 @@ const SectionAndImg = styled.section`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
+  @media (max-width: 1024px) { 
+    p{
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+  }
 `;
 
 const WithoutSpacing = styled(SectionAndImg)`
+  h4{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #242424;
+  }
+  p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  @media (max-width: 1024px) { 
     h4{
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 28px;
-      color: #242424;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 18px;
+      line-height: 24px;
     }
-    p{
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
+}
 `

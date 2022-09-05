@@ -1,5 +1,5 @@
 import Slider from 'infinite-react-carousel';
-
+import Faydee1 from "../assets/images/1.jpg"
 export default function Carousel() {
   const settings =  {
     autoplay: true,
@@ -15,7 +15,7 @@ export default function Carousel() {
       <span>CustomSlider</span>
       <Slider { ...settings }>
         <div>
-          <h3>1</h3>
+          <img src={Faydee1} alt="" />
         </div>
         <div>
           <h3>2</h3>
